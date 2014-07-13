@@ -3,7 +3,7 @@
 # and open the template in the editor.
 import datetime
 
-def get_posts(offset,num_posts):
+def get_posts(offset,num_posts,category):
     posts =  [{'title' : str(i)+'-How i met your mother', 
     'summary' : 'This is a horrible story. Really bad way of meeting any mother.',
     'url' : 'http://google.com',

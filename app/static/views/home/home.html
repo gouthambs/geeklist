@@ -3,11 +3,13 @@
         <div class="col-md-8 col-md-offset-2">
             <div id="posts" ng-repeat="p in posts.data">
                 <div class="panel panel-default">
-                    <div class="panel-heading"><a href="{{p.url}}"><h2>{{p.title}}</h2></a></div>
-                    <div class="panel-body">{{p.summary}}</div>
+                    <div class="panel-body">
+                        <a href="{{p.url}}" target="_blank"><h3>{{p.title}}</h3></a>
+                        {{p.summary}}
+                    </div>
                 </div>
             </div>
-            <a href="" ng-click="getPosts(posts.offset,posts.count)">More</a>
+            <a href="" ng-click="getPosts(posts.offset,posts.count,posts.category)">More</a>
         </div>
     </div>
     
