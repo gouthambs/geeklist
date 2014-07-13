@@ -9,9 +9,9 @@ from flask import Response, Blueprint
 api = Blueprint("api",__name__)
 
 
-@api.route('/posts/<int:page>/<int:num>/')
-def posts(page,num):
-    data = app_posts.get_posts(page,num)
+@api.route('/posts/<int:offset>/<int:num_posts>/')
+def posts(offset,num_posts):
+    data = app_posts.get_posts(offset,num_posts)
     return Response(json.dumps(data),  mimetype='application/json')
 
 

@@ -5,12 +5,12 @@
  */
 gListModule
     .service('gListAppService', function($http) {
-    this.getPosts = function(pageNum,count,successCallBack,errorCallBack) {
+    this.getPosts = function(offset,count,successCallBack,errorCallBack) {
             // Get a list of posts give a pageNum and count number of
             // posts per page
             var param = {
                 method: 'GET',
-                url: 'api/posts/'+pageNum+'/'+count
+                url: 'api/posts/'+offset+'/'+count
             };
             this.callApp(param,successCallBack,errorCallBack);
         };
